@@ -1,0 +1,112 @@
+@charset "utf-8";
+// If need, change your variables before importing Bulma
+
+// Blogs component styles
+.card {
+  border-radius: 0.5em;
+  box-shadow: 0;
+
+  .card-content {
+    padding: 1rem;
+    margin-top: 10px;
+    border-radius: inherit;
+  }
+
+  .card-image {
+    padding: 1.3em;
+    padding-bottom: 0;
+
+    img {
+      border-radius: 0.7em;
+    }
+  }
+}
+
+.card:hover {
+  .card-content {
+    transition: all 0.5s ease;
+  }
+  .card-content {
+    background-color: hsl(206, 70%, 96%);
+  }
+}
+
+.nl-signup {
+  border-radius: 0.7em;
+}
+
+// Arrow animation
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+img {
+  border-radius: 0.7em;
+}
+
+.cm-hr {
+  background-color: hsl(217, 71%, 53%);
+  border: none;
+  display: block;
+  height: 5px;
+  margin: 1rem 0;
+  width: 7em;
+  margin: auto;
+}
+
+// Home Page Styles
+.hero-title {
+  font-size: 2em;
+  line-height: 1;
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 4em;
+  }
+  .hero-body {
+    padding: 3rem 0.5rem;
+  }
+}
+
+// Navbar Styles
+.navbar-item {
+  font-size: 1.2em;
+}
+
+.active {
+  color: red;
+}
+
+// Blog Highlights
+.highlight-content {
+  padding: 1rem;
+  margin-top: 10px;
+  border-radius: 0.5em;
+}
+.bg-highlight:hover {
+  .highlight-content {
+    transition: all 0.5s ease;
+  }
+  .highlight-content {
+    background-color: hsl(206, 70%, 96%);
+  }
+}
+
+@import "~bulma/bulma.sass";
