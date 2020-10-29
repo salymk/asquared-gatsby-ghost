@@ -1,10 +1,12 @@
 import React from 'react'
+import { Layout, PostCard, Pagination } from '../components/common'
+
 
 const Articles = () => {
     return (
-        <div>
+        <Layout>
             <h1>Articles</h1>
-        </div>
+        </Layout>
     )
 }
 
