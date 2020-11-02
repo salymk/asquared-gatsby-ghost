@@ -1,40 +1,64 @@
+/* eslint-disable */
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { Tags } from '@tryghost/helpers-gatsby'
 import { readingTime as readingTimeHelper } from '@tryghost/helpers'
+import { jsx } from 'emotion'
 
 const PostCard = ({ post }) => {
     const url = `/${post.slug}/`
     const readingTime = readingTimeHelper(post)
-
     return (
-        <Link to={url} className="post-card">
-            <header className="post-card-header">
-                {post.feature_image &&
-                    <div className="post-card-image" style={{
-                        backgroundImage: `url(${post.feature_image})` ,
-                    }}></div>}
-                {post.tags && <div className="post-card-tags"> <Tags post={post} visibility="public" autolink={false} /></div>}
-                {post.featured && <span>Featured</span>}
-                <h2 className="post-card-title">{post.title}</h2>
-            </header>
-            <section className="post-card-excerpt">{post.excerpt}</section>
-            <footer className="post-card-footer">
-                <div className="post-card-footer-left">
-                    <div className="post-card-avatar">
-                        {post.primary_author.profile_image ?
-                            <img className="author-profile-image" src={post.primary_author.profile_image} alt={post.primary_author.name}/> :
-                            <img className="default-avatar" src="/images/icons/avatar.svg" alt={post.primary_author.name}/>
-                        }
+        <>
+            <Link to={url}>
+                <div className="card is-shadowless">
+                    <div className="card-image">
+                        <img src={post.feature_image} />
                     </div>
-                    <span>{ post.primary_author.name }</span>
+                    <div className="card-content">
+                        <div className="mb-3">
+                            <small className="is-size-7">
+                                <div className="tags">
+                                    {post.tags && (
+                                        <div className="tag is-link">
+                                            {` `}
+                                            <Tags
+                                                post={post}
+                                                visibility="public"
+                                                autolink={false}
+                                            />
+                                        </div>
+                                    )}
+                                    {post.featured && (
+                                        <div className="tag is-primary">
+                                            Featured
+                                        </div>
+                                    )}
+                                </div>
+                            </small>
+                        </div>
+                        <h4 className="title is-4 mb-1 has-text-black">{post.title}</h4>
+                        <p className='has-text-grey-darker'>{post.excerpt}</p>
+                    </div>
+                    <div className='media mt-5'>
+                            <div className='media-left' css={{marginRight: ".7em"}}>
+                                <figure className='image is-32x32'>
+                                    {post.primary_author.profile_image ?
+                                        <img className="" src={post.primary_author.profile_image} alt={post.primary_author.name}/> :
+                                        <img className="" src="/images/icons/avatar.svg" alt={post.primary_author.name}/>
+                                    }
+                                </figure>
+                            </div>
+                            <div className='media-content ml-0'>
+                                <p className='title is-uppercase has-text-black has-text-weight-medium' css={{fontSize: ".7rem" }}>{ post.primary_author.name }</p>
+                                <p className="subtitle is-uppercase" css={{fontSize: ".7rem"}}>{post.published_at_pretty} - {readingTime}</p>
+                            </div>
+                        </div>
                 </div>
-                <div className="post-card-footer-right">
-                    <div>{readingTime}</div>
-                </div>
-            </footer>
-        </Link>
+            </Link>
+        </>
     )
 }
 
