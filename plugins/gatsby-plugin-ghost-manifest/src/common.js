@@ -51,12 +51,11 @@ exports.defaultIcons = [
  */
 exports.doesIconExist = function doesIconExist(srcIcon) {
     try {
-        return fs.statSync(srcIcon).isFile()
+        return fs.statSync(srcIcon).isFile();
     } catch (e) {
         if (e.code === `ENOENT`) {
-            return false
-        } else {
-            throw e
+            return false;
         }
+        throw e;
     }
-}
+};

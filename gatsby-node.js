@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const path = require(`path`)
 const { postsPerPage } = require(`./src/utils/siteConfig`)
 const { paginate } = require(`gatsby-awesome-pagination`)
@@ -59,7 +61,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const posts = result.data.allGhostPost.edges
 
     // Load templates
-    const indexTemplate = path.resolve(`./src/templates/index.js`)
+    const indexTemplate = path.resolve(`./src/pages/index.js`)
     const tagsTemplate = path.resolve(`./src/templates/tag.js`)
     const authorTemplate = path.resolve(`./src/templates/author.js`)
     const pageTemplate = path.resolve(`./src/templates/page.js`)
@@ -97,15 +99,15 @@ exports.createPages = async ({ graphql, actions }) => {
                     slug: node.slug,
                     limit: postsPerPage,
                     skip: i * postsPerPage,
-                    numberOfPages: numberOfPages,
+                    numberOfPages,
                     humanPageNumber: currentPage,
-                    prevPageNumber: prevPageNumber,
-                    nextPageNumber: nextPageNumber,
-                    previousPagePath: previousPagePath,
-                    nextPagePath: nextPagePath,
+                    prevPageNumber,
+                    nextPageNumber,
+                    previousPagePath,
+                    nextPagePath,
                 },
             })
-        })
+        });
     })
 
     // Create author pages
@@ -140,15 +142,15 @@ exports.createPages = async ({ graphql, actions }) => {
                     slug: node.slug,
                     limit: postsPerPage,
                     skip: i * postsPerPage,
-                    numberOfPages: numberOfPages,
+                    numberOfPages,
                     humanPageNumber: currentPage,
-                    prevPageNumber: prevPageNumber,
-                    nextPageNumber: nextPageNumber,
-                    previousPagePath: previousPagePath,
-                    nextPagePath: nextPagePath,
+                    prevPageNumber,
+                    nextPageNumber,
+                    previousPagePath,
+                    nextPagePath,
                 },
             })
-        })
+        });
     })
 
     // Create pages
@@ -166,7 +168,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 slug: node.slug,
             },
         })
-    })
+    });
 
     // Create post pages
     posts.forEach(({ node }) => {
@@ -183,7 +185,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 slug: node.slug,
             },
         })
-    })
+    });
 
     // Create pagination
     paginate({
@@ -193,10 +195,9 @@ exports.createPages = async ({ graphql, actions }) => {
         component: indexTemplate,
         pathPrefix: ({ pageNumber }) => {
             if (pageNumber === 0) {
-                return `/`
-            } else {
-                return `/page`
+                return `/`;
             }
+            return `/page`;
         },
     })
 }

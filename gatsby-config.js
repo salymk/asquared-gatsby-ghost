@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const path = require(`path`)
 
 const config = require(`./src/utils/siteConfig`)
@@ -15,24 +17,31 @@ try {
         },
     }
 } finally {
-    const { apiUrl, contentApiKey } = process.env.NODE_ENV === `development` ? ghostConfig.development : ghostConfig.production
+    const { apiUrl, contentApiKey } =
+        process.env.NODE_ENV === `development`
+            ? ghostConfig.development
+            : ghostConfig.production
 
     if (!apiUrl || !contentApiKey || contentApiKey.match(/<key>/)) {
         throw new Error(`GHOST_API_URL and GHOST_CONTENT_API_KEY are required to build. Check the README.`) // eslint-disable-line
     }
 }
 
-if (process.env.NODE_ENV === `production` && config.siteUrl === `http://localhost:8000` && !process.env.SITEURL) {
+if (
+    process.env.NODE_ENV === `production` &&
+    config.siteUrl === `http://localhost:8000` &&
+    !process.env.SITEURL
+) {
     throw new Error(`siteUrl can't be localhost and needs to be configured in siteConfig. Check the README.`) // eslint-disable-line
 }
 
 /**
-* This is the place where you can tell Gatsby which plugins to use
-* and set them up the way you want.
-*
-* Further info 👉🏼 https://www.gatsbyjs.org/docs/gatsby-config/
-*
-*/
+ * This is the place where you can tell Gatsby which plugins to use
+ * and set them up the way you want.
+ *
+ * Further info 👉🏼 https://www.gatsbyjs.org/docs/gatsby-config/
+ *
+ */
 module.exports = {
     siteMetadata: {
         siteUrl: process.env.SITEURL || config.siteUrl,
@@ -108,9 +117,7 @@ module.exports = {
                     }
                 }
               `,
-                feeds: [
-                    generateRSSFeed(config),
-                ],
+                feeds: [generateRSSFeed(config)],
             },
         },
         {
@@ -187,6 +194,7 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-force-trailing-slashes`,
         `gatsby-plugin-offline`,
-        `gatsby-plugin-sass`
+        `gatsby-plugin-sass`,
+        `gatsby-plugin-emotion`
     ],
 }
