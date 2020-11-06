@@ -2,7 +2,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Layout, PostCard } from '../components/common'
+import { Layout, PostCard, NewsletterSignup } from '../components/common'
 import { MetaData } from '../components/common/meta'
 
 
@@ -11,18 +11,26 @@ const Articles = ({data, location}) => {
     console.log(posts)
     return (
         <>
-            <MetaData location={location} />
+            <MetaData location={location} title="Articles" />
 
             <Layout>
                 <h1 className='title is-1 has-text-centered has-text-weight-bold has-text-black-bis pt-6'>Articles</h1>
                 <hr className='cm-hr'/>
-                <div className='container pt-6'>
+                <div className='container pt-6 cm-section'>
                     <section className='post-feed'>
                         {posts.map(({node}) => (
                             <PostCard key={node.id} post={node}/>
                         ))}
                     </section>
+                    <NewsletterSignup
+                    className='mt-6'
+        title="Sign up for our newsletter"
+        subtitle="We'll never share your email"
+        cta="Subscribe"
+        placeholder='Your email here'
+      />
                 </div>
+
             </Layout>
         </>
     )
