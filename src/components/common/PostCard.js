@@ -22,7 +22,7 @@ const PostCard = ({ post }) => {
                             <small className="is-size-7">
                                 <div className="tags">
                                     {post.tags && (
-                                        <div className="tag is-link">
+                                        <div className="tag is-link is-uppercase">
                                             {` `}
                                             <Tags
                                                 post={post}
@@ -39,7 +39,7 @@ const PostCard = ({ post }) => {
                                 </div>
                             </small>
                         </div>
-                        <h4 className="title is-4 mb-1 has-text-black">{post.title}</h4>
+                        <h4 className="title is-4 mb-1 has-text-black is-capitalized">{post.title}</h4>
                         <p className='has-text-grey-darker'>{post.custom_excerpt}</p>
                     </div>
                     <div className='media mt-5'>
