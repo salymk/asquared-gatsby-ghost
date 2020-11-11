@@ -55,7 +55,7 @@ const MetaData = ({ data, settings, title, description, image, location }) => {
             type="WebSite"
         />
     )
-}
+};
 
 MetaData.defaultProps = {
     data: {},

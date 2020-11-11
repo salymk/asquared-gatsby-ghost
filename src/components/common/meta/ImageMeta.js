@@ -20,7 +20,7 @@ const ImageMeta = ({ image }) => {
             />
         </Helmet>
     )
-}
+};
 
 ImageMeta.propTypes = {
     image: PropTypes.string,

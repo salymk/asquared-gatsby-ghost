@@ -64,4 +64,4 @@ exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
     }
 
     setHeadComponents(headComponents)
-}
+};

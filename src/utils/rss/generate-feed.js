@@ -48,7 +48,7 @@ const generateItem = function generateItem(siteUrl, post) {
         },
     })
     return item
-}
+};
 
 const generateRSSFeed = function generateRSSFeed(siteConfig) {
     return {
@@ -130,6 +130,6 @@ const generateRSSFeed = function generateRSSFeed(siteConfig) {
   `,
         output: `/rss`,
     }
-}
+};
 
 module.exports = generateRSSFeed

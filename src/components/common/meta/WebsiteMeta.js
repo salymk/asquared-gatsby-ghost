@@ -100,7 +100,7 @@ const WebsiteMeta = ({
             <ImageMeta image={shareImage} />
         </>
     )
-}
+};
 
 WebsiteMeta.propTypes = {
     data: PropTypes.shape({

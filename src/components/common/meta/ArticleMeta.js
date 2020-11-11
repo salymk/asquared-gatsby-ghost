@@ -159,7 +159,7 @@ const ArticleMetaGhost = ({ data, settings, canonical }) => {
             <ImageMeta image={shareImage} />
         </>
     )
-}
+};
 
 ArticleMetaGhost.propTypes = {
     data: PropTypes.shape({

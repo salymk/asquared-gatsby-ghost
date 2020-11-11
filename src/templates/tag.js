@@ -35,7 +35,7 @@ const Tag = ({ data, location, pageContext }) => {
             </Layout>
         </>
     )
-}
+};
 
 Tag.propTypes = {
     data: PropTypes.shape({

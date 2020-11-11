@@ -32,7 +32,7 @@ export const getAuthorProperties = (primaryAuthor) => {
               )}/`
             : null,
     }
-}
+};
 
 getAuthorProperties.defaultProps = {
     fetchAuthorData: false,

@@ -71,7 +71,7 @@ const AuthorMeta = ({ data, settings, canonical }) => {
             <ImageMeta image={shareImage} />
         </>
     )
-}
+};
 
 AuthorMeta.propTypes = {
     data: PropTypes.shape({
