@@ -20,9 +20,9 @@ const Index = ({data, location}) => {
         <Layout>
             <IndexHero subtitle="Modernity is challenging, let's figure it out together." cta="Start here" cta2="Read our blog"/>
             
-            <section className='cm-section'>
+      <section className='cm-section'>
       <div className="container">
-        <h2 className="title mb-4 has-text-centered has-text-black-bis	has-text-weight-bold">
+        <h2 className="title mb-4 has-text-centered has-text-black-bis has-text-weight-bold">
           Featured Articles
         </h2>
         <hr className="cm-hr mb-6" />
