@@ -50,8 +50,8 @@ const Post = ({ data, location }) => {
                                     </div>
                                 )}
                             </div>
-                            <h1 className="has-text-blacktitle is-size-2-mobile has-text-black" css={{fontSize: "3.5rem",
-    fontWeight: "600", lineHeight: "1.1em"}}>{post.title}</h1>
+                            <h1 className="has-text-blacktitle is-size-2-mobile has-text-black is-capitalized" 
+                            css={{fontSize: "3.5rem", fontWeight: "600", lineHeight: "1.1em"}}>{post.title}</h1>
                             <h2 className="subtitle mt-2 is-size-5-mobile" css={{  
                                 marginTop: "10px",
                                 color: "var(--midgrey)",
