@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby'
+import { graphql } from 'gatsby';
 
 /**
  * These so called fragments are the fields we query on each template.
@@ -22,7 +22,7 @@ export const ghostTagFields = graphql`
         meta_title
         meta_description
     }
-`
+`;
 
 // Used for author pages
 export const ghostAuthorFields = graphql`
@@ -37,7 +37,7 @@ export const ghostAuthorFields = graphql`
         twitter
         facebook
     }
-`
+`;
 
 // Used for single posts
 export const ghostPostFields = graphql`
@@ -54,7 +54,8 @@ export const ghostPostFields = graphql`
 
         # Dates formatted
         created_at_pretty: created_at(formatString: "DD MMMM, YYYY")
-        published_at_pretty: published_at(formatString: "DD MMMM, YYYY")
+        published_at_pretty: published_at(formatString: "DD MMM, YYYY")
+        published_at_related: published_at(formatString: "MMM DD")
         updated_at_pretty: updated_at(formatString: "DD MMMM, YYYY")
 
         # Dates unformatted
@@ -129,7 +130,7 @@ export const ghostPostFields = graphql`
         comment_id
         reading_time
     }
-`
+`;
 
 // Used for single pages
 export const ghostPageFields = graphql`
@@ -220,7 +221,7 @@ export const ghostPageFields = graphql`
         comment_id
         reading_time
     }
-`
+`;
 
 // Used for settings
 export const ghostSettingsFields = graphql`
@@ -242,4 +243,4 @@ export const ghostSettingsFields = graphql`
             url
         }
     }
-`
+`;
