@@ -8,7 +8,6 @@ import { MetaData } from '../components/common/meta'
 
 const Articles = ({data, location}) => {
     const posts = data.allGhostPost.edges
-    console.log(posts)
     return (
         <>
             <MetaData location={location} title="Articles" />
@@ -24,11 +23,11 @@ const Articles = ({data, location}) => {
                     </section>
                     <NewsletterSignup
                     className='mt-6'
-        title="Sign up for our newsletter"
-        subtitle="We'll never share your email"
-        cta="Subscribe"
-        placeholder='Your email here'
-      />
+                        title="Sign up for our newsletter"
+                        subtitle="We'll never share your email"
+                        cta="Subscribe"
+                        placeholder='Your email here'
+                    />
                 </div>
 
             </Layout>
