@@ -1,8 +1,20 @@
 @charset "utf-8";
 // If need, change your variables before importing Bulma
 
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Lora|Playfair+Display:700i,900");
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+
 /* Base Styles cm- => custom
 /* ---------------------------------------------------------- */
+
+.title-font {
+    font-family: "Spectral", serif;
+}
+
+.subtitle-font {
+    font-family: "Karla", sans-serif;
+}
 
 .container {
     max-width: 1120px;
@@ -154,11 +166,178 @@ img {
 /* Post template
 /* ---------------------------------------------------------- */
 
-.content-body p {
+// More Articles
+
+.related-article-link {
     color: black;
+    transition: 0.3s;
+    :hover {
+        .related-article-title {
+            color: #3273dc;
+        }
+    }
+}
+
+.related-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 1.5rem 0;
+    position: relative;
+}
+
+.related-article-title {
+    flex-grow: 1;
+    padding-right: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.post-title {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.post-subtitle {
+    font-family: "Lato", sans-serif;
+    color: rgba(0, 0, 0, 0.54);
+    margin: 0 0 24px 0;
     font-size: 21px;
-    margin-top: 2em;
-    line-height: 32px;
+}
+
+@media (max-width: 1025px) {
+    .post-title {
+        font-size: 34px;
+    }
+}
+
+.content-body {
+    p {
+        color: green;
+        font-size: 21px;
+        margin-top: 2em;
+        line-height: 32px;
+    }
+
+    h1,
+    h2,
+    p,
+    i,
+    a,
+    .first-letter,
+    .authorName a {
+        color: rgba(0, 0, 0, 0.84);
+        text-rendering: optimizeLegibility;
+    }
+
+    h2 {
+        font-family: "Lato", sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        padding: 0;
+        margin: 56px 0 -13px -1.883px;
+        text-align: left;
+        line-height: 34.5px;
+        letter-spacing: -0.45px;
+    }
+
+    p,
+    i,
+    a {
+        margin-top: 21px;
+        font-family: "Lora";
+        font-size: 21px;
+        letter-spacing: -0.03px;
+        line-height: 1.58;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    a:hover {
+        color: hsl(217, 71%, 53%);
+    }
+
+    blockquote {
+        font-family: "Playfair Display", serif;
+        font-size: 30px;
+        font-style: italic;
+        letter-spacing: -0.36px;
+        line-height: 44.4px;
+        overflow-wrap: break-word;
+        margin: 55px 0 33px 0;
+        /* text-align: center; */
+        color: rgba(0, 0, 0, 0.68);
+        padding: 0 0 0 50px;
+
+        background-color: white;
+    }
+
+    code {
+        font-size: 18px;
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 2px;
+        padding: 3px 5px;
+        color: #343f44;
+    }
+
+    .highlighted {
+        background: #7dffb3;
+    }
+
+    p:first-of-type:first-letter {
+        overflow-wrap: break-word;
+        font-family: "Playfair Display", serif;
+        font-size: 60px;
+        line-height: 60px;
+        display: block;
+        position: relative;
+        float: left;
+        margin: 0px 7px 0 -5px;
+    }
+}
+
+/* Gallery Styles
+/* ---------------------------------------------------------- */
+.kg-gallery-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1040px;
+    width: 100%;
+}
+
+.kg-gallery-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.kg-gallery-image img {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+    margin: 0.75em 0 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+    margin: 0 0 0 0.75em;
+}
+
+.kg-gallery-card + .kg-image-card.kg-width-wide,
+.kg-gallery-card + .kg-gallery-card,
+.kg-image-card.kg-width-wide + .kg-gallery-card,
+.kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide {
+    margin: -2.25em 0 3em;
 }
 
 @import "~bulma/bulma.sass";
