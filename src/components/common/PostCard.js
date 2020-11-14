@@ -18,42 +18,29 @@ const PostCard = ({ post }) => {
                         <img src={post.feature_image} />
                     </div>
                     <div className="card-content">
-                        <div className="mb-3">
-                            <small className="is-size-7">
-                                <div className="tags">
-                                    {post.tags && (
-                                        <div className="tag is-link is-uppercase">
-                                            {` `}
-                                            <Tags
-                                                post={post}
-                                                visibility="public"
-                                                autolink={false}
-                                            />
-                                        </div>
-                                    )}
-                                    {post.featured && (
-                                        <div className="tag is-primary">
-                                            Featured
-                                        </div>
-                                    )}
-                                </div>
-                            </small>
-                        </div>
-                        <h4 className="title is-4 mb-1 has-text-black is-capitalized">{post.title}</h4>
-                        <p className='has-text-grey-darker'>{post.custom_excerpt}</p>
+                    <div className='mb-1' css={{display: "flex"}}>
+                                {post.tags && (
+                                    <div className="title has-text-link mr-3 mb-2 is-uppercase" css={{fontSize: "12px"}}>
+                                        {` `}
+                                        <Tags
+                                            post={post}
+                                            visibility="public"
+                                            autolink={false}
+                                        />
+                                    </div>
+                                )}
+                                {post.featured && (
+                                    <div className="title has-text-primary is-uppercase" css={{fontSize: "12px"}}>
+                                        Featured
+                                    </div>
+                                )}
+                            </div>
+                        <h4 className="title is-4 mb-1 has-text-black is-capitalized title-font">{post.title}</h4>
+                        <p className='has-text-grey-darker subtitle-font'>{post.custom_excerpt}</p>
                     </div>
                     <div className='media mt-5'>
-                        <div className='media-left' css={{marginRight: ".7em"}}>
-                            <figure className='image is-32x32'>
-                                {post.primary_author.profile_image ?
-                                    <img className="" src={post.primary_author.profile_image} alt={post.primary_author.name}/> :
-                                    <img className="" src="/images/icons/avatar.svg" alt={post.primary_author.name}/>
-                                }
-                            </figure>
-                        </div>
                         <div className='media-content ml-0'>
-                            <p className='title is-uppercase has-text-black has-text-weight-medium' css={{fontSize: ".7rem" }}>{ post.primary_author.name }</p>
-                            <p className="subtitle is-uppercase" css={{fontSize: ".7rem"}}>{post.published_at_pretty} - {readingTime}</p>
+                            <p className="subtitle is-uppercase" css={{fontSize: ".8rem"}}>{post.published_at_pretty}  •  {readingTime}</p>
                         </div>
                     </div>
                 </div>
