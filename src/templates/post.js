@@ -5,11 +5,13 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
-import { Layout } from '../components/common'
+import { Layout, MoreArticles } from '../components/common'
 import { MetaData } from '../components/common/meta'
 import { Tags } from '@tryghost/helpers-gatsby'
 import { readingTime as readingTimeHelper } from '@tryghost/helpers'
 import { jsx } from 'emotion'
+
+import {FacebookShareButton, LinkedinShareButton, TwitterShareButton, WhatsappShareButton, FacebookIcon, LinkedinIcon, TwitterIcon, WhatsappIcon} from 'react-share'
 
 
 /**
@@ -20,7 +22,9 @@ import { jsx } from 'emotion'
  */
 const Post = ({ data, location }) => {
     const post = data.ghostPost
+    const relatedPosts = data.allGhostPost.edges
     const readingTime = readingTimeHelper(post)
+    const url = `/${post.slug}/`
 
 
     return (
@@ -31,7 +35,7 @@ const Post = ({ data, location }) => {
             </Helmet>
             <Layout>
                 <div className="columns is-centered mt-6">
-                    <article className="column is-12 is-7-tablet is-7-desktop mt-6">
+                    <article className="column is-8-tablet is-7-desktop mt-6">
                     <section className="post-full-content mb-6">
                             <div css={{display: "flex"}}>
                                 {post.tags && (
@@ -50,15 +54,9 @@ const Post = ({ data, location }) => {
                                     </div>
                                 )}
                             </div>
-                            <h1 className="has-text-blacktitle is-size-2-mobile has-text-black is-capitalized" 
-                            css={{fontSize: "3.5rem", fontWeight: "600", lineHeight: "1.1em"}}>{post.title}</h1>
-                            <h2 className="subtitle mt-2 is-size-5-mobile" css={{  
-                                marginTop: "10px",
-                                color: "var(--midgrey)",
-                                fontFamily:" Georgia,serif",
-                                fontSize: "1.4rem",
-                                lineHeight: "1.4em",
-                                fontWeight: "300"}}>{post.custom_excerpt}</h2>
+                            <h1 className="post-title has-text-black is-capitalized" 
+                            >{post.title}</h1>
+                            <h2 className="post-subtitle mt-2 is-size-5-mobile">{post.custom_excerpt}</h2>
 
                                 <hr className='mt-6'/>
 
@@ -73,7 +71,7 @@ const Post = ({ data, location }) => {
                         </div>
                         <div className='media-content ml-0 mt-2'>
                             <p className='title is-uppercase has-text-black has-text-weight-medium' css={{fontSize: ".9rem" }}>{ post.primary_author.name }</p>
-                            <p className="subtitle is-uppercase" css={{fontSize: ".7rem"}}>{post.published_at_pretty} - {readingTime}</p>
+                            <p className="subtitle is-uppercase" css={{fontSize: ".7rem"}}>{post.published_at_pretty} - {readingTime}</p>>
                         </div>
                     </div>
                                                         
@@ -87,31 +85,48 @@ const Post = ({ data, location }) => {
                                 />
                             </figure>
                         ) : null}
-                        <section className="post-full-content content">
+                        <section className="post-full-content">
                             {/* The main post content */}
                             <section
                                 className="content-body load-external-scripts"
                                 dangerouslySetInnerHTML={{ __html: post.html }}
                             />
                         </section>
+                        <hr className="mt-6"/>
                     </article>
+                   
                 </div>
+
+
+            <section>
+           <div className='columns is-centered'>
+               <div className="column is-8-tablet is-7-desktop">
+                <h1 className='title is-4'>You might also like...</h1>
+                {relatedPosts.map(({node}) => (
+                    <MoreArticles key={node.id} post={node}/>
+                ))}
+                </div>
+            </div>
+        </section>
+                
+               
+                
             </Layout>
         </>
     )
 }
 
-Post.propTypes = {
-    data: PropTypes.shape({
-        ghostPost: PropTypes.shape({
-            codeinjection_styles: PropTypes.object,
-            title: PropTypes.string.isRequired,
-            html: PropTypes.string.isRequired,
-            feature_image: PropTypes.string,
-        }).isRequired,
-    }).isRequired,
-    location: PropTypes.object.isRequired,
-}
+// Post.propTypes = {
+//     data: PropTypes.shape({
+//         ghostPost: PropTypes.shape({
+//             codeinjection_styles: PropTypes.object,
+//             title: PropTypes.string.isRequired,
+//             html: PropTypes.string.isRequired,
+//             feature_image: PropTypes.string,
+//         }).isRequired,
+//     }).isRequired,
+//     location: PropTypes.object.isRequired,
+// }
 
 export default Post
 
@@ -120,5 +135,15 @@ export const postQuery = graphql`
         ghostPost(slug: { eq: $slug }) {
             ...GhostPostFields
         }
+
+        allGhostPost(sort: {order: DESC, fields: [published_at]}, limit: 5) {
+            edges {
+              node {
+                ...GhostPostFields
+              }
+            }
+          }
     }
+
+    
 `
