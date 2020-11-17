@@ -54,13 +54,12 @@ const Post = ({ data, location }) => {
                                     </div>
                                 )}
                             </div>
-                            <h1 className="post-title has-text-black is-capitalized" 
-                            >{post.title}</h1>
+                            <h1 className="post-title has-text-black is-capitalized">{post.title}</h1>
                             <h2 className="post-subtitle mt-2 is-size-5-mobile">{post.custom_excerpt}</h2>
 
                                 <hr className='mt-6'/>
 
-<div className='media mt-5'>
+                            <div className='media mt-5'>
                         <div className='media-left' css={{marginRight: ".7em"}}>
                             <figure className='image is-48x48'>
                                 {post.primary_author.profile_image ?
@@ -71,7 +70,7 @@ const Post = ({ data, location }) => {
                         </div>
                         <div className='media-content ml-0 mt-2'>
                             <p className='title is-uppercase has-text-black has-text-weight-medium' css={{fontSize: ".9rem" }}>{ post.primary_author.name }</p>
-                            <p className="subtitle is-uppercase" css={{fontSize: ".7rem"}}>{post.published_at_pretty} - {readingTime}</p>>
+                            <p className="subtitle is-uppercase" css={{fontSize: ".7rem"}}>{post.published_at_pretty} - {readingTime}</p>
                         </div>
                     </div>
                                                         
