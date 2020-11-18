@@ -16,7 +16,7 @@ const IndexHero = props => {
               <p className="subtitle is-4 py-3">{props.subtitle}</p>
               <div className="buttons is-centered">
                 <Link
-                  to="/start/"
+                  to="/start-here/"
                   className="button is-medium is-link has-text-weight-bold"
                 >
                   {props.cta}
