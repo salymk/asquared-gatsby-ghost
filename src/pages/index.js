@@ -13,7 +13,7 @@ const Index = ({data, location}) => {
     const featuredPost2 = data.allGhostPost.edges[1]
     const featuredPost3 = data.allGhostPost.edges[2]
 
-    console.log(featuredPost3)
+    console.log(featuredPost1.node)
     return (
         <>
         <MetaData location={location} />
