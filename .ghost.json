@@ -1,10 +1,10 @@
 {
   "development": {
     "apiUrl": "https://ghost.frontendsolved.com",
-    "contentApiKey": "b7651c303faba29bf899a6245e"
+    "contentApiKey": "a5f954db6df9ad937630093c45"
   },
   "production": {
     "apiUrl": "https://ghost.frontendsolved.com",
-    "contentApiKey": "b7651c303faba29bf899a6245e"
+    "contentApiKey": "a5f954db6df9ad937630093c45"
   }
 }
