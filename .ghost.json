@@ -1,7 +1,7 @@
 {
   "development": {
-    "apiUrl": "https://ghost.frontendsolved.com",
-    "contentApiKey": "5015a5a67d198c871acc271527"
+    "apiUrl": "http://localhost:2368",
+    "contentApiKey": "6f0a0fa089aa078bcbcceee1fa"
   },
   "production": {
     "apiUrl": "https://ghost.frontendsolved.com",
