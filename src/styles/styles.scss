@@ -193,6 +193,11 @@ img {
 
 /* Post template
 /* ---------------------------------------------------------- */
+.post-feature-image img {
+    margin: 0 0 3vw;
+    object-fit: cover;
+    border-radius: 0;
+}
 
 /* More Articles To Read
 /* ---------------------------------------------------------- */
