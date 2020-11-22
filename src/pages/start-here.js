@@ -21,7 +21,7 @@ const Start = () => {
         <div className="container py-4">
           <div className="columns is-vcentered">
             <div className="column is-6">
-              <h2 className="title is-spaced is-2 has-text-black-bis title-font">
+              <h2 className="title is-spaced is-2 has-text-black-bis title-font is-capitalized">
                 Who is Abdel Albakri Al Jerusalem? 
               </h2>
               <p className="subtitle subtitle-font">
@@ -43,43 +43,42 @@ const Start = () => {
         <div className="container box has-background-link-light	p-6">
           <div className="columns is-multiline">
               <div className="column is-6">
-                <h2 className="title is-3 mb-3 has-text-black-bis title-font">
+                <h2 className="title is-3 mb-3 has-text-black-bis is-capitalized">
                 Who is this for?
                 </h2>
-                <div className="content subtitle-font">
+                <div className="content" css={{fontSize: "18px"}}>
                 It's for the people of Wakanda! Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </div>
               </div>
               <div className="column is-6">
-                <h2 className="title is-3 mb-3 has-text-black-bis title-font">
+                <h2 className="title is-3 mb-3 has-text-black-bis is-capitalized">
                 Who is this for?
                 </h2>
-                <div className="content subtitle-font">
+                <div className="content" css={{fontSize: "18px"}}>
                 It's for the people of Wakanda! Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </div>
               </div>
               <div className="column is-6">
-                <h2 className="title is-3 mb-3 has-text-black-bis title-font">
+                <h2 className="title is-3 mb-3 has-text-black-bis is-capitalized">
                 Who is this for?
                 </h2>
-                <div className="content subtitle-font">
+                <div className="content" css={{fontSize: "18px"}}>
                 It's for the people of Wakanda! Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </div>
               </div>
               <div className="column is-6">
-                <h2 className="title is-3 mb-3 has-text-black-bis title-font">
+                <h2 className="title is-3 mb-3 has-text-black-bis is-capitalized">
                 Who is this for?
                 </h2>
-                <div className="content subtitle-font">
+                <div className="content" css={{fontSize: "18px"}}>
                 It's for the people of Wakanda! Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </div>
               </div>
-
           </div>
         </div>
         <hr className="my-6" />
         <div className="container has-text-centered mt-6">
-          <h2 className="title is-2 is-spaced has-text-black-bis title-font">
+          <h2 className="title is-2 is-spaced has-text-black-bis">
                 New to this or just getting started?
           </h2>
           <h3 className="subtitle subtitle-font">
