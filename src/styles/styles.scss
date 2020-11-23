@@ -31,8 +31,12 @@ $radius: 0.6rem;
 /* Base Styles cm- => custom
 /* ---------------------------------------------------------- */
 
-button {
-    border-radius: 5px;
+div:empty {
+    display: none;
+}
+
+.button {
+    border-radius: 0.4rem;
 }
 
 audio,
@@ -131,7 +135,7 @@ img {
         padding-bottom: 0;
 
         img {
-            border-radius: 0.7em;
+            margin-bottom: 15px;
         }
     }
 }
