@@ -18,9 +18,9 @@ const PostCard = ({ post }) => {
                         <img src={post.feature_image} />
                     </div>
                     <div className="card-content">
-                    <div className='mb-1' css={{display: "flex"}}>
+                    <div className='' css={{display: "flex", marginBottom: "10px"}}>
                                 {post.tags && (
-                                    <div className="title has-text-link mr-3 mb-2 is-uppercase" css={{fontSize: "12px"}}>
+                                    <div className="title has-text-link mr-3 is-uppercase" css={{fontSize: "12px"}}>
                                         <Tags
                                             post={post}
                                             visibility="public"
