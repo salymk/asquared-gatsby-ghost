@@ -19,10 +19,10 @@ const PostBox = ({post}) => {
                         </figure>
                     </div>
                     <div className="column is-7">
-                    <div css={{display: "flex", marginBottom: "10px"}}>
+                    <div css={{display: "flex", marginBottom: "-10px"}}>
                                 {post.tags && (
-                                    <div className="title has-text-link mr-3 is-uppercase" css={{fontSize: "12px"}}>
-                                        {` `}
+                                    <div className="title has-text-link mr-3 is-uppercase" css={{fontSize: "12px", marginBottom: "20px"}}>
+                                        
                                         <Tags
                                             post={post}
                                             visibility="public"
