@@ -34,8 +34,8 @@ const PostCard = ({ post }) => {
                                     </div>
                                 )}
                             </div>
-                        <h4 className="title is-4 mb-1 has-text-black is-capitalized title-font">{post.title}</h4>
-                        <p className='has-text-grey-darker subtitle-font'>{post.custom_excerpt}</p>
+                        <h4 className="title mb-1 has-text-black is-capitalized" css={{fontSize: "22px"}}>{post.title}</h4>
+                        <p className='has-text-grey-darker'>{post.custom_excerpt}</p>
                     </div>
                     <div className='media mt-5'>
                         <div className='media-content ml-0'>
