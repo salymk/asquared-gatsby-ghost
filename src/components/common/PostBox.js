@@ -19,7 +19,7 @@ const PostBox = ({post}) => {
                         </figure>
                     </div>
                     <div className="column is-7">
-                    <div css={{display: "flex"}}>
+                    <div css={{display: "flex", marginBottom: "5px"}}>
                                 {post.tags && (
                                     <div className="title has-text-link mr-3 mb-2 is-uppercase" css={{fontSize: "12px"}}>
                                         {` `}
@@ -36,7 +36,7 @@ const PostBox = ({post}) => {
                                     </div>
                                 )}
                             </div>
-                        <h4 className="title is-4 mb-1 has-text-black title-font">{post.title}</h4>
+                        <h4 className="title mb-1 has-text-black title-font" css={{fontSize: "22px"}}>{post.title}</h4>
                         <p className='has-text-grey-darker subtitle-font'>{post.custom_excerpt}</p>
 
                         <div className='media mt-5'>
