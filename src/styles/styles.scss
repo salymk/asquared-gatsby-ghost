@@ -54,9 +54,9 @@ video {
     padding: 0 4vw;
 }
 
-img {
-    border-radius: 0.7em;
-}
+// img {
+//     border-radius: 0.7em;
+// }
 
 .cm-hr {
     background-color: hsl(217, 71%, 53%);
@@ -104,7 +104,7 @@ img {
 // Postbox component
 .box {
     box-shadow: 0;
-    border-radius: 0.7em;
+    // border-radius: 0.7em;
     padding: 1em;
 }
 
@@ -122,12 +122,12 @@ img {
 // Postcard component
 .card {
     box-shadow: 0;
-    border-radius: 0.7em;
+    // border-radius: 0.7em;
     padding: 1em;
 
     .card-content {
         margin-top: 10px;
-        border-radius: inherit;
+        // border-radius: inherit;
         padding: 0;
     }
 
@@ -146,7 +146,7 @@ img {
     }
 
     background-color: hsl(206, 70%, 96%);
-    border-radius: 0.7em;
+    // border-radius: 0.7em;
 }
 
 // Arrow animation for {Read more} button
