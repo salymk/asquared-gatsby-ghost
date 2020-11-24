@@ -369,7 +369,31 @@ video {
 @media (max-width: 768px) {
     .content-body {
         h1 {
-            font-size: 32px;
+            font-size: 26px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 22px;
+        }
+    }
+
+    .content-title {
+        margin: 0.8em 0;
+        font-size: 32px;
+        font-weight: 600;
+        margin-top: 5px;
+    }
+}
+
+// Tablet styles
+@media (max-width: 1023px) and (min-width: 769px) {
+    .content-body {
+        h1 {
+            font-size: 30px;
         }
 
         h2 {
@@ -377,14 +401,15 @@ video {
         }
 
         h3 {
-            font-size: 24px;
+            font-size: 26px;
         }
     }
 
     .content-title {
         margin: 0.8em 0;
-        font-size: 34px;
+        font-size: 40px;
         font-weight: 600;
+        margin-top: 5px;
     }
 }
 
