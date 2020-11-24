@@ -12,23 +12,20 @@ const Start = () => {
   return (
     <Layout>
       <div className="section">
-        <h1 className="title is-1 is-spaced has-text-centered has-text-weight-bold has-text-black-bis">
+        <h1 className="title page-title-font is-1 is-size-2-mobile has-text-centered has-text-black pt-6">
         Get Started Here
         </h1>
         <hr className="cm-hr" />
       </div>
-      <section className="section">
+      <section className="section start-here-section">
         <div className="container py-4">
           <div className="columns is-vcentered">
             <div className="column is-6">
-              <h2 className="title is-spaced is-2 has-text-black-bis title-font is-capitalized">
+              <h2 className="title is-spaced is-3 is-size-4-mobile has-text-centered-mobile has-text-black-bis is-capitalized">
                 Who is Abdel Albakri Al Jerusalem? 
               </h2>
-              <p className="subtitle subtitle-font">
+              <p className="subtitle has-text-centered-mobile">
               T'Challa, a member of the royal family of the fictional African country of Wakanda. After the death my father, I claimed the throne and the role of Black Panther. I was exposed to a mystical herb that enhanced my strength and agility to near-superhuman levels. 
-                <Link to="/author/" className="has-text-link">
-                  You can learn more about me here.
-                </Link>
               </p>
             </div>
             <div className="column is-4">
