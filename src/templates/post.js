@@ -63,7 +63,7 @@ const Post = ({ data, location }) => {
                         <div className='media-left' css={{marginRight: ".7em"}}>
                             <figure className='image is-48x48'>
                                 {post.primary_author.profile_image ?
-                                    <img className="" src={post.primary_author.profile_image} alt={post.primary_author.name}/> :
+                                    <img className="" css={{borderRadius: "50%"}} src={post.primary_author.profile_image} alt={post.primary_author.name}/> :
                                     <img className="" src="/images/icons/avatar.svg" alt={post.primary_author.name}/>
                                 }
                             </figure>
