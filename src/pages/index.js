@@ -22,7 +22,7 @@ const Index = ({data, location}) => {
             
       <section className='cm-section'>
       <div className="container">
-        <h2 className="title mb-4 has-text-centered has-text-black-bis has-text-weight-bold">
+        <h2 className="title page-title-font mb-4 has-text-centered has-text-black">
           Featured Articles
         </h2>
         <hr className="cm-hr mb-6" />

@@ -9,7 +9,7 @@ const IndexHero = props => {
         <div className="container">
           <div className="columns is-centered">
             <div className="column is-12 is-10-desktop has-text-centered">
-              <h1 className="hero-title mb-4 has-text-weight-bold is-capitalized has-text-black-bis is-size-3-mobile">
+              <h1 className="hero-title page-title-font mb-4 has-text-weight-bold is-capitalized has-text-black is-size-2-mobile">
                 Do things <span className="has-text-link">right</span>.<br /> Do
                 things <span className="has-text-link">better</span>.
               </h1>

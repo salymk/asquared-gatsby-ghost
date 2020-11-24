@@ -13,7 +13,7 @@ const Articles = ({data, location}) => {
             <MetaData location={location} title="Articles" />
 
             <Layout>
-                <h1 className='title is-1 has-text-centered has-text-weight-bold has-text-black-bis pt-6'>Articles</h1>
+                <h1 className='title page-title-font is-1 is-size-2-mobile has-text-centered has-text-black pt-6'>Articles</h1>
                 <hr className='cm-hr'/>
                 <div className='container pt-6 cm-section'>
                     <section className='post-feed'>
