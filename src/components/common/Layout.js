@@ -79,7 +79,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 <div>
                                     <div className="navbar-item">
                                         <Link
-                                            className="button is-link has-text-weight-bold is-size-5"
+                                            className="button is-outlined is-link has-text-weight-bold is-size-5"
                                             to="/newsletter/"
                                         >
                                             Subscribe
