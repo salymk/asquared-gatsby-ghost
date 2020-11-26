@@ -55,7 +55,7 @@ const Post = ({ data, location }) => {
                                 )}
                             </div>
                             <h1 className="content-title has-text-black is-capitalized">{post.title}</h1>
-                            <h2 className="post-subtitle mt-2 is-size-5-mobile">{post.custom_excerpt}</h2>
+                            <h2 className="post-subtitle mt-2 is-size-5-mobile" css={{fontWeight: "normal"}}>{post.custom_excerpt}</h2>
 
                                 <hr className='mt-6'/>
 
