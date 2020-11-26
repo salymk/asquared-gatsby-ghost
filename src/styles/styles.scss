@@ -32,6 +32,10 @@ $radius: 0.6rem;
 /* Base Styles cm- => custom
 /* ---------------------------------------------------------- */
 
+p {
+    font-weight: unset;
+}
+
 .page-title-font {
     font-family: "Roboto", sans-serif;
 }
@@ -395,6 +399,10 @@ video {
         font-size: 32px;
         font-weight: 600;
         margin-top: 5px;
+    }
+
+    .hero-body {
+        padding: 1rem 1rem;
     }
 }
 
