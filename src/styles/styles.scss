@@ -32,10 +32,6 @@ $radius: 0.6rem;
 /* Base Styles cm- => custom
 /* ---------------------------------------------------------- */
 
-body {
-    font-weight: 200;
-}
-
 .page-title-font {
     font-family: "Roboto", sans-serif;
 }
@@ -249,6 +245,7 @@ video {
     dl,
     blockquote {
         margin: 0 0 1.5em 0;
+        font-weight: normal;
     }
 
     ol,
