@@ -37,7 +37,7 @@ const PostBox = ({post}) => {
                                 )}
                             </div>
                         <h4 className="title mb-1 has-text-black title-font" css={{fontSize: "22px"}}>{post.title}</h4>
-                        <p className='has-text-grey-darker subtitle-font'>{post.custom_excerpt}</p>
+                        <p className='has-text-grey-darker card-subtitle'>{post.custom_excerpt}</p>
 
                         <div className='media mt-5'>
                         <div className='media-content ml-0'>

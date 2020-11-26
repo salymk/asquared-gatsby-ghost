@@ -1,10 +1,8 @@
 @charset "utf-8";
 // If need, change your variables before importing Bulma
 
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Lora|Playfair+Display:700i,900");
-@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300&display=swap");
 
 /* Colours */
 $color-primary: #3eb0ef;
@@ -30,8 +28,15 @@ $font-sans-serif: "Roboto";
 /* Base Styles cm- => custom
 /* ---------------------------------------------------------- */
 
-.subtitle {
-    font-weight: 300;
+.cm-subtitle {
+    font-weight: normal;
+    font-family: "Hind Guntur", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+
+.content {
+    font-family: "Hind Guntur", sans-serif;
 }
 
 .page-title-font {
@@ -99,6 +104,11 @@ video {
     line-height: 1;
 }
 
+.hero-subtitle {
+    font-family: "Hind Guntur", sans-serif;
+    font-size: 24px;
+}
+
 @media (min-width: 1025px) {
     .hero-title {
         font-size: 5em;
@@ -144,6 +154,12 @@ video {
         img {
             margin-bottom: 15px;
         }
+    }
+
+    .card-subtitle {
+        font-weight: normal;
+        font-family: "Hind Guntur", sans-serif;
+        font-size: 1rem;
     }
 }
 
@@ -207,7 +223,7 @@ video {
 
 .post-subtitle {
     font-size: 28px;
-    font-weight: 300;
+    font-family: "Hind Guntur", sans-serif;
 }
 
 .post-feature-image img {
@@ -259,7 +275,6 @@ video {
     ol,
     dl {
         margin: 0 0 1.5em 0;
-        font-weight: 300;
     }
 
     ol,
@@ -600,5 +615,3 @@ body {
 p {
     font-weight: normal;
 }
-
-@import "bulma/sass/utilities/_all.sass";

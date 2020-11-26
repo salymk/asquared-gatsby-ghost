@@ -75,10 +75,10 @@ const Start = () => {
         </div>
         <hr className="my-6" />
         <div className="container has-text-centered mt-6">
-          <h2 className="title is-2 is-spaced has-text-black-bis">
+          <h2 className="title is-2 is-size-3-mobile is-spaced has-text-black-bis">
                 New to this or just getting started?
           </h2>
-          <h3 className="subtitle subtitle-font">
+          <h3 className="cm-subtitle">
           If you're new to our website, then you're in the right place. Look, we all know this, modernity is challenging, but it doesn't have to be so let's figure it out together.
           </h3>
         </div>
