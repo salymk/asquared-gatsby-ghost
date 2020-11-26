@@ -13,10 +13,10 @@ const Newsletter = ( props) => {
           <div className="columns is-centered">
             <div className="column is-10">
               <div className="container has-text-centered">
-                <h1 className="title page-title-font is-1 is-size-3-mobile has-text-centered has-text-black pt-6">
+                <h1 className="title page-title-font is-1 is-size-4-mobile has-text-centered has-text-black pt-6">
                 Let's tackle the challenges of modernity together!
                 </h1>
-                <p className="subtitle">Subscribe to recieve our 200 step guide to body building greatness! Pluse extra goodies every Friday.</p>
+                <p className="cm-subtitle">Subscribe to recieve our 200 step guide to body building greatness! Pluse extra goodies every Friday.</p>
               </div>
               <div className="columns is-centered mt-4 is-multiline">
                 <div className="column is-8">
