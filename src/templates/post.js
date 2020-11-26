@@ -55,7 +55,7 @@ const Post = ({ data, location }) => {
                                 )}
                             </div>
                             <h1 className="content-title has-text-black is-capitalized">{post.title}</h1>
-                            <h2 className="post-subtitle mt-2 is-size-5-mobile" css={{fontWeight: "normal"}}>{post.custom_excerpt}</h2>
+                            <h2 className="post-subtitle mt-2">{post.custom_excerpt}</h2>
 
                                 <hr className='mt-6'/>
 
@@ -70,7 +70,7 @@ const Post = ({ data, location }) => {
                         </div>
                         <div className='media-content ml-0 mt-2'>
                             <p className='title is-uppercase has-text-black has-text-weight-medium' css={{fontSize: ".9rem" }}>{ post.primary_author.name }</p>
-                            <p className="subtitle is-uppercase" css={{fontSize: ".7rem"}}>{post.published_at_pretty} - {readingTime}</p>
+                            <p className="is-uppercase" css={{fontSize: ".7rem"}}>{post.published_at_pretty} - {readingTime}</p>
                         </div>
                     </div>
                                                         
