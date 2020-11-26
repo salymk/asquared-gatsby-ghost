@@ -22,9 +22,9 @@ const Start = () => {
           <div className="columns is-vcentered">
             <div className="column is-6">
               <h2 className="title is-spaced is-3 is-size-4-mobile has-text-centered-mobile has-text-black-bis is-capitalized">
-                Who is Abdel Albakri Al Jerusalem? 
+                Who am I? 
               </h2>
-              <p className="subtitle has-text-centered-mobile">
+              <p className="has-text-centered-mobile">
               T'Challa, a member of the royal family of the fictional African country of Wakanda. After the death my father, I claimed the throne and the role of Black Panther. I was exposed to a mystical herb that enhanced my strength and agility to near-superhuman levels. 
               </p>
             </div>

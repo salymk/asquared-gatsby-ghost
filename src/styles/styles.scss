@@ -14,8 +14,7 @@ $color-border: #c7d5d8;
 $color-bg: #f5f5f5;
 
 /* Fonts */
-$font-sans-serif: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$font-sans-serif: "Roboto";
 // $font-serif: Georgia, Times, serif;
 // $font-mono: Menlo, Courier, monospace;
 // $font-light: 100;
@@ -593,3 +592,9 @@ video {
 }
 
 @import "~bulma/bulma.sass";
+
+body {
+    font-weight: normal;
+}
+
+@import "bulma/sass/utilities/_all.sass";
