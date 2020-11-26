@@ -35,11 +35,11 @@ const PostCard = ({ post }) => {
                                 )}
                             </div>
                         <h4 className="title mb-1 has-text-black is-capitalized" css={{fontSize: "22px"}}>{post.title}</h4>
-                        <p className='has-text-grey-darker'>{post.custom_excerpt}</p>
+                        <p className='has-text-grey-darker' css={{fontWeight: "300"}}>{post.custom_excerpt}</p>
                     </div>
                     <div className='media mt-5'>
                         <div className='media-content ml-0'>
-                            <p className="subtitle is-uppercase" css={{fontSize: ".8rem"}}>{post.published_at_pretty}  •  {readingTime}</p>
+                            <p className="subtitle is-uppercase" css={{fontSize: ".8rem", fontWeight: "300"}}>{post.published_at_pretty}  •  {readingTime}</p>
                         </div>
                     </div>
                 </div>
