@@ -39,7 +39,7 @@ const PostCard = ({ post }) => {
                     </div>
                     <div className='media mt-5'>
                         <div className='media-content ml-0'>
-                            <p className="subtitle is-uppercase" css={{fontSize: ".8rem", fontWeight: "300"}}>{post.published_at_pretty}  •  {readingTime}</p>
+                            <p className="is-uppercase" css={{fontSize: ".8rem"}}>{post.published_at_pretty}  •  {readingTime}</p>
                         </div>
                     </div>
                 </div>

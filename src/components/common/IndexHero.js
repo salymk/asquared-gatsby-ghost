@@ -14,7 +14,7 @@ const IndexHero = props => {
                 Do things <span className="has-text-link">right</span>.<br /> Do
                 things <span className="has-text-link">better</span>.
               </h1>
-              <p className="subtitle is-4 is-size-4-mobile py-3">{props.subtitle}</p>
+              <p className="is-4 is-size-4-mobile py-3">{props.subtitle}</p>
               <div className="buttons is-centered">
                 <Link
                   to="/start-here/"
