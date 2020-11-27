@@ -288,7 +288,8 @@ video {
         margin: 0.3em 0 1.8em;
         padding: 0 1.6em 0 1.6em;
         border-left: #cbeafb 0.5em solid;
-        font-weight: 300;
+        font-weight: normal;
+        font-style: italic;
     }
 
     p,
@@ -322,8 +323,8 @@ video {
     ul,
     ol {
         max-width: 100%;
-        color: #292929;
         font-size: 17px;
+        font-weight: normal;
     }
 
     li {
