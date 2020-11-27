@@ -16,9 +16,9 @@ const MoreArticles = ({post}) => {
                 <Link to={url} className="related-article-link">
                 <article className='related-article'>
                         <p css={{whiteSpace: "nowrap"}} className='has-text-weight-bold has-text-warning mr-3 is-uppercase'>{post.published_at_related}</p>
-                        <p className="content related-article-title">{post.title}</p>
+                        <p className="cm-content related-article-title">{post.title}</p>
                     <div>
-                        <p className="content" css={{whiteSpace: "nowrap"}}>{readingTime}</p>
+                        <p className="cm-content" css={{whiteSpace: "nowrap"}}>{readingTime}</p>
                     </div>
                 </article>
                 <hr css={{margin: "0"}}/>
