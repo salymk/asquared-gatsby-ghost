@@ -8,7 +8,7 @@ const NewsletterSignup = props => {
         <div className="columns is-vcentered">
           <div className="column is-6 has-text-centered">
             <h3 className="title has-text-white title-font">{props.title}</h3>
-            <p className="subtitle has-text-white subtitle-font">{props.subtitle}</p>
+            <p className="subtitle has-text-weight-normal has-text-white subtitle-font">{props.subtitle}</p>
           </div>
           <div className="column is-5 ">
             <div className="field has-addons">
