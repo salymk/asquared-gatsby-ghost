@@ -226,6 +226,22 @@ video {
 /* Post template
 /* ---------------------------------------------------------- */
 
+.social-share-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0 10px 0;
+}
+
+.social-share-button {
+    transition: all 0.4s ease;
+}
+
+.social-share-button:hover {
+    // box-shadow: 8px 28px 50px rgba(39, 44, 49, 0.07),
+    //     1px 6px 12px rgba(39, 44, 49, 0.04);
+    transform: translate3D(0, -1px, 0) scale(1.04);
+}
+
 .post-subtitle {
     font-size: 28px;
     font-family: "Hind Guntur", sans-serif;

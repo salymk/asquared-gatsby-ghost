@@ -24,7 +24,8 @@ const Post = ({ data, location }) => {
     const post = data.ghostPost
     const relatedPosts = data.allGhostPost.edges
     const readingTime = readingTimeHelper(post)
-    const url = `/${post.slug}/`
+    const shareUrl = `https://frontendsolved.com/${post.slug}/`
+    console.log(shareUrl)
 
 
     return (
@@ -92,11 +93,30 @@ const Post = ({ data, location }) => {
                             />
                         </section>
                         <hr className="mt-6"/>
+
+                    <div className="social-share-container">
+                        <h1 className='title is-3 mr-5'>Share</h1>
+                        <FacebookShareButton
+                            url={shareUrl}
+                            quote={post.custom_excerpt}
+                            className="mr-3 social-share-button"
+                        >
+                            <FacebookIcon size={48}/>
+                        </FacebookShareButton>
+
+                        <TwitterShareButton
+                            url={shareUrl}
+                            title={post.custom_excerpt}
+                            className="mr-3 social-share-button">
+                            <TwitterIcon size={48}/>
+                        </TwitterShareButton>
+
+                        <LinkedinShareButton url={shareUrl}>
+                            <LinkedinIcon size={48} className="social-share-button"/>
+                        </LinkedinShareButton>
+                    </div>
                     </article>
-                   
                 </div>
-
-
             <section>
            <div className='columns is-centered'>
                <div className="column is-8-tablet is-7-desktop">
