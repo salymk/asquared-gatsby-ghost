@@ -30,6 +30,17 @@ $font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
 /* Base Styles cm- => custom
 /* ---------------------------------------------------------- */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    font-family: $font-sans-serif;
+    color: #15171a;
+}
+
 .cm-subtitle {
     font-weight: normal;
     font-family: "Hind Guntur", sans-serif;
