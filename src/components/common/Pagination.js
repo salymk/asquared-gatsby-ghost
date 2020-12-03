@@ -1,7 +1,8 @@
 /* eslint-disable */
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
 const Pagination = ({ pageContext }) => {
     const {
@@ -9,7 +10,7 @@ const Pagination = ({ pageContext }) => {
         nextPagePath,
         humanPageNumber,
         numberOfPages,
-    } = pageContext
+    } = pageContext;
 
     return (
         <nav className="pagination" role="navigation">
@@ -33,11 +34,11 @@ const Pagination = ({ pageContext }) => {
                 )}
             </div>
         </nav>
-    )
+    );
 }
 
 Pagination.propTypes = {
     pageContext: PropTypes.object.isRequired,
-}
+};
 
-export default Pagination
+export default Pagination;
