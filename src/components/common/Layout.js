@@ -1,20 +1,19 @@
 /* eslint-disable */
 
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Helmet } from 'react-helmet'
-import { Link, StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import { jsx } from 'emotion'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
+import { Link, StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import { jsx } from 'emotion';
 
-import { Navigation } from '.'
-import config from '../../utils/siteConfig'
+import { Navigation } from '.';
+import config from '../../utils/siteConfig';
 
 // Styles
-import '../../styles/styles.scss'
+import '../../styles/styles.scss';
 
 // import '../../styles/app.css'
-
 
 /**
  * Main layout component
@@ -25,21 +24,20 @@ import '../../styles/styles.scss'
  *
  */
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
-    const site = data.allGhostSettings.edges[0].node
+    const site = data.allGhostSettings.edges[0].node;
     const twitterUrl = site.twitter
         ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}`
-        : null
+        : null;
     const facebookUrl = site.facebook
         ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}`
-        : null
-    console.log(site)
+        : null;
 
     const onClick = () => {
-        const toggle = document.querySelector(`.navbar-burger`);
-        const menu = document.querySelector(`.navbar-menu`);
-        toggle.classList.toggle(`is-active`);
-        menu.classList.toggle(`is-active`);
-    };
+        const toggle = document.querySelector(`.navbar-burger`)
+        const menu = document.querySelector(`.navbar-menu`)
+        toggle.classList.toggle(`is-active`)
+        menu.classList.toggle(`is-active`)
+    }
     return (
         <>
             <Helmet>
@@ -76,7 +74,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                         navClass="navbar-item"
                                     />
                                 </div>
-                                <div>
+                                {/* <div>
                                     <div className="navbar-item">
                                         <Link
                                             className="button is-outlined is-link has-text-weight-bold is-size-5"
@@ -85,13 +83,13 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                             Subscribe
                                         </Link>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </nav>
                 </header>
 
-                <main css={{padding: "3rem 0.7rem"}}>
+                <main css={{ padding: `3rem 0.7rem` }}>
                     {/* All the main content gets inserted here, index.js, post.js */}
                     {children}
                 </main>
@@ -141,7 +139,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 </footer>
             </div>
         </>
-    )
+    );
 }
 
 DefaultLayout.propTypes = {
@@ -152,7 +150,7 @@ DefaultLayout.propTypes = {
         file: PropTypes.object,
         allGhostSettings: PropTypes.object.isRequired,
     }).isRequired,
-}
+};
 
 const DefaultLayoutSettingsQuery = (props) => (
     <StaticQuery
@@ -176,6 +174,6 @@ const DefaultLayoutSettingsQuery = (props) => (
         `}
         render={(data) => <DefaultLayout data={data} {...props} />}
     />
-)
+);
 
-export default DefaultLayoutSettingsQuery
+export default DefaultLayoutSettingsQuery;
