@@ -6,14 +6,14 @@ import { Layout, PostCard, NewsletterSignup } from '../components/common'
 import { MetaData } from '../components/common/meta'
 
 
-const Articles = ({data, location}) => {
+const Blog = ({data, location}) => {
     const posts = data.allGhostPost.edges
     return (
         <>
             <MetaData location={location} title="Articles" />
 
             <Layout>
-                <h1 className='title page-title-font is-1 is-size-2-mobile has-text-centered has-text-black pt-6'>Articles</h1>
+                <h1 className='title page-title-font is-1 is-size-2-mobile has-text-centered has-text-black pt-6'>Blog</h1>
                 <hr className='cm-hr'/>
                 <div className='container pt-6 cm-section'>
                     <section className='post-feed'>
@@ -35,7 +35,7 @@ const Articles = ({data, location}) => {
     )
 }
 
-Articles.propTypes = {
+Blog.propTypes = {
     data: PropTypes.shape({
         allGhostPost: PropTypes.object.isRequired,
     }).isRequired,
@@ -45,12 +45,13 @@ Articles.propTypes = {
     pageContext: PropTypes.object,
 }
 
-export default Articles
+export default Blog
 
 export const allPosts = graphql`
 query {
     allGhostPost(
-        sort: { order: DESC, fields: [published_at] } 
+        sort: { order: DESC, fields: [published_at] },
+        filter: {tags: {elemMatch: {name: {eq: "#article"}}}} 
         
         ) {
       edges {
