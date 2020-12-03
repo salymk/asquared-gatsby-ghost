@@ -30,6 +30,14 @@ $font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
 /* Base Styles cm- => custom
 /* ---------------------------------------------------------- */
 
+.cm-hero {
+    margin: 0 6em 1em 6em;
+}
+
+.cm-hero-body {
+    padding: 7rem 1.5rem;
+}
+
 h1,
 h2,
 h3,
@@ -253,7 +261,7 @@ video {
 }
 
 .post-subtitle {
-    font-size: 28px;
+    font-size: 26px;
     font-family: "Hind Guntur", sans-serif;
 }
 
