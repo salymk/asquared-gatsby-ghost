@@ -20,7 +20,7 @@ const PostCard = ({ post }) => {
                     <div className="card-content">
                     <div className='' css={{display: "flex", marginBottom: "-10px"}}>
                                 {post.tags && (
-                                    <div className="title has-text-link mr-3 is-uppercase" css={{fontSize: "12px", marginBottom: "20px"}}>
+                                    <div className={`title has-text-link mr-3 is-uppercase`} css={{fontSize: "14px", marginBottom: "20px"}}>
                                         <Tags
                                             post={post}
                                             visibility="public"
@@ -29,12 +29,12 @@ const PostCard = ({ post }) => {
                                     </div>
                                 )}
                                 {post.featured && (
-                                    <div className="title mb-4 has-text-primary is-uppercase" css={{fontSize: "12px"}}>
+                                    <div className="title mb-4 has-text- is-uppercase" css={{fontSize: "14px"}}>
                                         Featured
                                     </div>
                                 )}
                             </div>
-                        <h4 className="title mb-1 has-text-black is-capitalized" css={{fontSize: "22px"}}>{post.title}</h4>
+                        <h4 className="title mb-3 has-text-black is-capitalized" css={{fontSize: "22px"}}>{post.title}</h4>
                         <p className='card-subtitle has-text-grey-darker'>{post.custom_excerpt}</p>
                     </div>
                     <div className='media mt-5'>

@@ -21,7 +21,7 @@ const PostBox = ({post}) => {
                     <div className="column is-7">
                     <div css={{display: "flex", marginBottom: "-10px"}}>
                                 {post.tags && (
-                                    <div className="title has-text-link mr-3 is-uppercase" css={{fontSize: "12px", marginBottom: "20px"}}>
+                                    <div className="title has-text-link mr-3 is-uppercase" css={{fontSize: "14px", marginBottom: "20px"}}>
                                         
                                         <Tags
                                             post={post}
@@ -31,7 +31,7 @@ const PostBox = ({post}) => {
                                     </div>
                                 )}
                                 {post.featured && (
-                                    <div className="title has-text-primary is-uppercase" css={{fontSize: "12px"}}>
+                                    <div className="title has-text-primary is-uppercase" css={{fontSize: "14px"}}>
                                         Featured
                                     </div>
                                 )}
