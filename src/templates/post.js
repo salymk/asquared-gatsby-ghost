@@ -40,7 +40,7 @@ const Post = ({ data, location }) => {
                     <section className="post-full-content mb-6">
                             <div css={{display: "flex"}}>
                                 {post.tags && (
-                                    <div className="title has-text-link mr-3 mb-2 is-uppercase" css={{fontSize: "12px"}}>
+                                    <div className="title has-text-link mr-3 mb-2 is-uppercase" css={{fontSize: "14px"}}>
                                         {` `}
                                         <Tags
                                             post={post}
@@ -50,7 +50,7 @@ const Post = ({ data, location }) => {
                                     </div>
                                 )}
                                 {post.featured && (
-                                    <div className="title has-text-primary is-uppercase" css={{fontSize: "12px"}}>
+                                    <div className="title has-text-primary is-uppercase" css={{fontSize: "14px"}}>
                                         Featured
                                     </div>
                                 )}
@@ -85,6 +85,7 @@ const Post = ({ data, location }) => {
                                 />
                             </figure>
                         ) : null}
+                        
                         <section className="post-full-content">
                             {/* The main post content */}
                             <section
