@@ -42,11 +42,22 @@ if (
  * Further info 👉🏼 https://www.gatsbyjs.org/docs/gatsby-config/
  *
  */
+require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`,
+  })
+
 module.exports = {
     siteMetadata: {
         siteUrl: process.env.SITEURL || config.siteUrl,
     },
     plugins: [
+        {
+            resolve: 'gatsby-plugin-mailchimp',
+            options: {
+                endpoint: process.env.MAILCHIMP_ENDPOINT, 
+                timeout: 3500, 
+            },
+        },
         /**
          *  Content Plugins
          */

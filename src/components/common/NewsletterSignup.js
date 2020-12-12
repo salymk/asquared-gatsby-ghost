@@ -1,11 +1,23 @@
-/* eslint-disable */
-import React from 'react';
+import React, { useState } from 'react';
+import addToMailchimp from 'gatsby-plugin-mailchimp';
 
 export default function NewsletterSignup(props) {
+    const [subscriber, setSubscriber] = useState(``)
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        const result = await addToMailchimp(subscriber);
+        setSubscriber(result);
+        console.log(result)
+        document.getElementById(`contact-form`).reset();
+    }
+
+    const handleChange = (event) => {
+        setSubscriber(event.target.value)
+    }
+
     return (
-        <section
-            className={`section nl-signup has-background-link ${props.className}`}
-        >
+        <section className="section nl-signup has-background-link">
             <div className="container">
                 <div className="columns is-vcentered">
                     <div className="column is-7 has-text-centered">
@@ -17,24 +29,35 @@ export default function NewsletterSignup(props) {
                         </p>
                     </div>
                     <div className="column is-5 ">
-                        <div className="field has-addons">
-                            <div className="control is-expanded">
-                                <input
-                                    className="input"
-                                    type="email"
-                                    placeholder={props.placeholder}
-                                    aria-label="email"
-                                />
+                        <form onSubmit={handleSubmit} id="contact-form">
+                            <div className="field has-addons">
+                                <div className="control is-expanded">
+                                    <input
+                                        className="input"
+                                        type="email"
+                                        placeholder="Your email here"
+                                        name="Email"
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                                <div className="field">
+                                    <div className="control">
+                                        <button
+                                            className="button is-black"
+                                            type="submit"
+                                        >
+                                            Sign up
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="control">
-                                <button
-                                    type="button"
-                                    className="button is-black"
-                                >
-                                    {props.cta}
-                                </button>
-                            </div>
-                        </div>
+                        </form>
+                        <p className="has-text-white">
+                            {subscriber.result === `success`
+                                ? `Thanks! You've been added to our newsletter.
+                                `
+                                : ``}
+                        </p>
                     </div>
                 </div>
             </div>

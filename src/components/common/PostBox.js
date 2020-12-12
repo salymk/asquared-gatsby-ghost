@@ -15,7 +15,7 @@ const PostBox = ({post}) => {
                 <div className="columns box-highlight">
                     <div className="column is-two-fifths">
                         <figure className="image">
-                            <img src={post.feature_image} alt='hfhfh' />
+                            <img src={post.feature_image} alt={post.title} />
                         </figure>
                     </div>
                     <div className="column is-7">
