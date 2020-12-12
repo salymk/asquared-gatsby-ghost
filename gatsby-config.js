@@ -42,8 +42,7 @@ if (
  * Further info 👉🏼 https://www.gatsbyjs.org/docs/gatsby-config/
  *
  */
-require('dotenv').config()
-
+require("dotenv").config()
 
 module.exports = {
     siteMetadata: {
