@@ -40,7 +40,7 @@ const Index = ({data, location}) => {
         
         <div className="buttons is-centered">
           <Link
-            to="/articles/"
+            to="/blog/"
             className="button is-link is-medium has-text-weight-bold"
           >
             Read more
